@@ -1,0 +1,17 @@
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://java.sun.com/xml/ns/persistence
+        http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="testPU"  transaction-type="JTA">
+		
+		<!-- Se debe crear el datasource, dependiendo del Servidor de Aplicaciones ej Jboss Wildfly8, Glassfish4 -->
+		<jta-data-source>java:/jboss/testDS</jta-data-source>
+		<class>com.ascuntar.test.entities.Prueba</class>
+	    <properties>
+			<!-- Properties for Hibernate -->
+			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
+			<property name="hibernate.show_sql" value="false" />
+		</properties>
+	</persistence-unit>
+</persistence>
