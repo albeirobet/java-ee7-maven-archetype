@@ -10,7 +10,7 @@
      		<default-locale>es</default-locale>
      	</locale-config>
 		<resource-bundle>
-			<base-name>com.ascuntar.test.internationalization.web_module_es</base-name>
+			<base-name>internationalization.web_module_es</base-name>
 			<var>msj_web</var>
 		</resource-bundle>
      </application>
