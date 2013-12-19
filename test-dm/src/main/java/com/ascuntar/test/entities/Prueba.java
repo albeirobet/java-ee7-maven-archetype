@@ -5,9 +5,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/*
+ * @author Eyder Albeiro Ascuntar Rosales
+ */
 
 @Entity
-@Table(name="TBL_PRUEBA")
+@Table(name = "TBL_PRUEBA")
 public class Prueba {
 
 	@Id
@@ -15,7 +18,7 @@ public class Prueba {
 	private long Id;
 	private String firstname;
 	private String surname;
-	
+
 	public Prueba() {
 	}
 
@@ -48,7 +51,5 @@ public class Prueba {
 	public void setSurname(String surname) {
 		this.surname = surname;
 	}
-	
-	
-	
+
 }

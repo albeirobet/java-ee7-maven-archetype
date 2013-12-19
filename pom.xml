@@ -1,16 +1,39 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.ascuntar</groupId>
-  <artifactId>test</artifactId>
-  <version>1.0</version>
-  <packaging>pom</packaging>
-  <name>test</name>
-  <description>test archetype</description>
-  <properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.ascuntar</groupId>
+	<artifactId>test</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+	<name>${name.project}</name>
+	<description>Maven Archetype to work with Java EE7, JPA, JSF, EJB 3.x, Primefaces</description>
+	 <inceptionYear>2013</inceptionYear>
+	<developers>
+		<developer>
+			<id>albeirobet</id>
+			<name>Eyder Albeiro Ascuntar Rosales</name>
+			<email>eaar23@gmail.com</email>
+		</developer>
+	</developers>
+	<properties>
+
+		<!-- ////////////////////////////////////////////////////////////// -->
+		<!-- IMPORTANT! Changing these properties to customize your project -->
+		<!-- ////////////////////////////////////////////////////////////// -->
+		<group.id.project>com.ascuntar</group.id.project>
+		<artifact.id.project>test</artifact.id.project>
+		<version.project>1.0</version.project>
+		<name.project>test</name.project>
+		<!-- ////////////////////////////////////////////////////////////// -->
+		<!-- End custom properties -->
+		<!-- ////////////////////////////////////////////////////////////// -->
+		
+		<!-- Java Version -->
 		<version.java>1.7</version.java>
-		<!-- Java EE -->
+		<!-- Java EE Version -->
 		<version.javaee>7.0</version.javaee>
 		<version.java.web>7.0</version.java.web>
+
 		<version.eclipselink>2.5.1</version.eclipselink>
 		<version.hibernate.validator>5.0.1.Final</version.hibernate.validator>
 		<version.json>1.0.2</version.json>

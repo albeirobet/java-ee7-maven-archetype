@@ -7,15 +7,22 @@
 		<version>1.0</version>
 	</parent>
 	<artifactId>test-bo</artifactId>
-	<name>test-bo</name>
+	<name>${name.project}-bo</name>
+	<developers>
+		<developer>
+			<id>albeirobet</id>
+			<name>Eyder Albeiro Ascuntar Rosales</name>
+			<email>eaar23@gmail.com</email>
+		</developer>
+	</developers>
 	<dependencies>
-		<!-- Dependencias Api Java -->
+		<!-- Api Java EE Dependency -->
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		<!-- Dependencias Internas de la Aplicacion -->
+		<!-- Internal Application Dependencies -->
 		<dependency>
 			<groupId>com.ascuntar</groupId>
 			<artifactId>test-dm</artifactId>

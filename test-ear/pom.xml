@@ -8,9 +8,16 @@
 	</parent>
 	<artifactId>test-ear</artifactId>
 	<packaging>ear</packaging>
-	<name>test-ear</name>
-
+	<name>${name.project}-ear</name>
+	<developers>
+		<developer>
+			<id>albeirobet</id>
+			<name>Eyder Albeiro Ascuntar Rosales</name>
+			<email>eaar23@gmail.com</email>
+		</developer>
+	</developers>
 	<dependencies>
+		<!-- Internal Application Dependencies -->
 		<dependency>
 			<groupId>com.ascuntar</groupId>
 			<artifactId>test-web</artifactId>
@@ -49,7 +56,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>test</finalName>
+		<finalName>${name.project}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -64,33 +71,33 @@
 				<artifactId>maven-ear-plugin</artifactId>
 				<version>2.8</version>
 				<configuration>
-					<applicationName>test</applicationName>
-					<displayName>test</displayName>
+					<applicationName>${name.project}</applicationName>
+					<displayName>${name.project}</displayName>
 					<modules>
 						<ejbModule>
-							<artifactId>test-ejb</artifactId>
-							<groupId>com.ascuntar</groupId>
+							<artifactId>${name.project}-ejb</artifactId>
+							<groupId>${group.id.project}</groupId>
 						</ejbModule>
 						<jarModule>
-							<artifactId>test-bo</artifactId>
-							<groupId>com.ascuntar</groupId>
+							<artifactId>${name.project}-bo</artifactId>
+							<groupId>${group.id.project}</groupId>
 						</jarModule>
 						<jarModule>
-							<artifactId>test-dao</artifactId>
-							<groupId>com.ascuntar</groupId>
+							<artifactId>${name.project}-dao</artifactId>
+							<groupId>${group.id.project}</groupId>
 						</jarModule>
 						<jarModule>
-							<artifactId>test-dm</artifactId>
-							<groupId>com.ascuntar</groupId>
+							<artifactId>${name.project}-dm</artifactId>
+							<groupId>${group.id.project}</groupId>
 						</jarModule>
 						<jarModule>
-							<artifactId>test-commons</artifactId>
-							<groupId>com.ascuntar</groupId>
+							<artifactId>${name.project}-commons</artifactId>
+							<groupId>${group.id.project}</groupId>
 						</jarModule>
 						<webModule>
-							<artifactId>test-web</artifactId>
-							<groupId>com.ascuntar</groupId>
-							<contextRoot>/test</contextRoot>
+							<artifactId>${name.project}-web</artifactId>
+							<groupId>${group.id.project}</groupId>
+							<contextRoot>/${name.project}</contextRoot>
 						</webModule>
 					</modules>
 					<generateApplicationXml>true</generateApplicationXml>

@@ -7,9 +7,16 @@
 		<version>1.0</version>
 	</parent>
 	<artifactId>test-commons</artifactId>
-	<name>test-commons</name>
+	<name>${name.project}-commons</name>
+	<developers>
+		<developer>
+			<id>albeirobet</id>
+			<name>Eyder Albeiro Ascuntar Rosales</name>
+			<email>eaar23@gmail.com</email>
+		</developer>
+	</developers>
 	<dependencies>
-		<!-- Dependencia del Api de Java -->
+		<!-- Api Java EE Dependency -->
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>

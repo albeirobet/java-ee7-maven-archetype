@@ -3,9 +3,8 @@
 	xsi:schemaLocation="
         http://java.sun.com/xml/ns/persistence
         http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
-	<persistence-unit name="testPU"  transaction-type="JTA">
-		
-		<!-- Se debe crear el datasource, dependiendo del Servidor de Aplicaciones ej Jboss Wildfly8, Glassfish4 -->
+	<!-- Configure el datasource en algun servidor que soporte Java ee7, por ejemplo Wildfly8, Glassfish4.  -->
+	<persistence-unit name="testPU"  transaction-type="JTA">		
 		<jta-data-source>java:/jboss/testDS</jta-data-source>
 		<class>com.ascuntar.test.entities.Prueba</class>
 	    <properties>
