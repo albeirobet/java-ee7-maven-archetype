@@ -49,6 +49,8 @@
 		<version.maven.jaxws.plugin>2.2</version.maven.jaxws.plugin>
 		<version.maven.surefire.plugin>2.16</version.maven.surefire.plugin>
 		<version.maven.failsafe.plugin>2.16</version.maven.failsafe.plugin>
+		<!-- Ejb Plugin -->
+		<version.ejb.plugin>3.0</version.ejb.plugin>
 		<!-- Project -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
