@@ -12,23 +12,35 @@
 <h:body>
 	<h:form id="form">
 		<p:panel id="panel" header="#{msj_web.nuevo_usuario}">
-			<p:messages id="msgs" />
+			<p:growl autoUpdate="true" globalOnly="true"></p:growl>
 			<h:panelGrid columns="3">
 				<h:outputLabel for="firstname" value="#{msj_web.primer_nombre}: *" />
-				<p:inputText id="firstname" value="#{pruebaBean.firstname}"	required="true" label="Firstname">
+				<p:inputText id="firstname" value="#{pruebaBean.firstname}"
+					required="true" label="Firstname">
 					<f:validateLength minimum="2" />
 				</p:inputText>
 				<p:message for="firstname" display="icon" />
 				<h:outputLabel for="surname" value="#{msj_web.primer_apellido}: *" />
-				<p:inputText id="surname" value="#{pruebaBean.surname}"	label="Surname" required="true">
+				<p:inputText id="surname" value="#{pruebaBean.surname}"
+					label="Surname" required="true">
 					<f:validateLength minimum="2" />
 					<p:ajax update="msgSurname" event="keyup" />
 				</p:inputText>
 				<p:message for="surname" id="msgSurname" display="icon" />
 			</h:panelGrid>
-			<p:commandButton id="btn" value="Save" update="panel"
+			<p:commandButton id="btn" value="#{msj_web.registro_usuario}" update="panel"
 				actionListener="#{pruebaBean.savePerson}" />
 		</p:panel>
+		<h:form>
+			<h:panelGrid columns="3">
+				#{msj_web.idioma}:<p:spacer width="5" />
+				<h:selectOneMenu value="#{languageBean.locale}" onchange="submit()"
+					valueChangeListener="#{languageBean.localeChanged}"
+					styleClass="form-control">
+					<f:selectItems value="#{languageBean.countries}" />
+				</h:selectOneMenu>
+			</h:panelGrid>
+		</h:form>
 	</h:form>
 </h:body>
 </html>
